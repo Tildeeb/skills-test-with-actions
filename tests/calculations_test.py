@@ -87,3 +87,62 @@ def test_get_nth_fibonacci_negative():
     # Act & Assert
     with pytest.raises(ValueError):
         get_nth_fibonacci(n)
+
+def test_area_of_circle_typical():
+    """Test with a typical positive radius."""
+    # Arrange
+    radius = 2
+
+    # Act
+    result = area_of_circle(radius)
+
+    # Assert
+    assert result == pytest.approx(12.566, rel=1e-3)
+
+
+def test_get_nth_fibonacci_five():
+    """Test with n=5."""
+    # Arrange
+    n = 5
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 5
+
+
+def test_get_nth_fibonacci_two():
+    """Test with n=2."""
+    # Arrange
+    n = 2
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 1
+
+
+def test_get_nth_fibonacci_three():
+    """Test with n=3."""
+    # Arrange
+    n = 3
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 2
+
+
+def test_get_nth_fibonacci_four():
+    """Test with n=4."""
+    # Arrange
+    n = 4
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 3
